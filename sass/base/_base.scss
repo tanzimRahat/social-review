@@ -1,0 +1,38 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; //1rem = 10px
+
+    @media only screen and (max-width: 75em) {
+        font-size: 50%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    background-color: $color-neutral-white;
+    font-family: 'Spartan', sans-serif;
+    background: url(../../img/bg-pattern-top-desktop.svg) 0% 0% no-repeat fixed,
+        url(../../img/bg-pattern-bottom-desktop.svg) 100% 100% no-repeat fixed;
+
+    @media only screen and (max-width: 75em) {
+        background: url(../../img/bg-pattern-top-desktop.svg) 0% 0% / 37% 37%
+                no-repeat fixed,
+            url(../../img/bg-pattern-bottom-desktop.svg) 100% 100% / 50% 50%
+                no-repeat fixed;
+    }
+
+    @media only screen and (max-width: 30em) {
+        background: url(../../img/bg-pattern-top-mobile.svg) 0% 0% no-repeat
+                fixed,
+            url(../../img/bg-pattern-bottom-mobile.svg) 100% 100% no-repeat
+                fixed;
+    }
+}
